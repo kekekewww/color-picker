@@ -1,0 +1,14 @@
+{
+  "name": "color-picker-extension",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Selection-based color previews for Chrome",
+  "scripts": {
+    "test": "node --test tests/parser.test.cjs",
+    "test:browser": "node tests/browser.cjs",
+    "package": "node scripts/package.cjs",
+    "store:assets": "node scripts/store-assets.cjs",
+    "store:sync-policy": "node scripts/sync-store-site.cjs"
+  },
+  "devDependencies": { "playwright": "^1.55.0" }
+}

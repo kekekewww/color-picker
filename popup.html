@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Color Picker</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body class="popup">
+  <header class="brand"><img src="icons/icon48.png" width="34" height="34" alt=""><span>color picker<span class="brand-note">讓色碼，有畫面。</span></span><span class="version">v1.0</span></header>
+  <main>
+    <div class="palette-strip" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+    <h1>選取，即見色彩。</h1>
+    <p class="intro">在網頁上反白顏色代碼，<br>讓每一個色碼都變成看得見的色票。</p>
+    <div class="settings">
+      <label class="setting main-setting"><span><strong>啟用 Color Picker</strong><small id="enabled-description">選取文字時，自動預覽色彩</small></span><input type="checkbox" id="enabled" role="switch" checked><span class="switch" aria-hidden="true"></span></label>
+      <label class="setting"><span><strong>在原文旁顯示色塊</strong><small>多個色碼各自對應，方便比較</small></span><input type="checkbox" id="inline" role="switch" checked><span class="switch" aria-hidden="true"></span></label>
+      <label class="setting"><span><strong>辨識不含 # 的 HEX</strong><small>例如 FF6B81；也可能辨識到一般文字</small></span><input type="checkbox" id="bareHex" role="switch"><span class="switch" aria-hidden="true"></span></label>
+    </div>
+    <a class="demo-link" href="demo.html" target="_blank">打開色彩練習場 <span aria-hidden="true">↗</span></a>
+    <p class="support">HEX · RGB · HSL · HWB · Lab · LCH<br>OKLab · OKLCH · color()</p>
+    <p id="save-status" class="save-status" role="status"></p>
+  </main>
+  <footer class="privacy"><span class="privacy-dot" aria-hidden="true"></span>選取文字僅在本機處理。 <a href="privacy.html" target="_blank">隱私權政策</a></footer>
+  <script src="src/popup.js"></script>
+</body>
+</html>

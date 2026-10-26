@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Color Picker 隱私權政策：選取文字在本機解析，偏好設定儲存在裝置上，擴充功能不向開發者或第三方傳送內容。">
+  <title>隱私權政策 / Privacy Policy | Color Picker</title>
+  <link rel="stylesheet" href="privacy.css">
+</head>
+<body>
+  <main class="policy">
+    <header class="policy-brand"><img src="icons/icon48.png" alt="" width="38" height="38"><span>Color Picker</span></header>
+    <div class="policy-colors" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+    <article id="zh">
+      <h1>隱私權政策</h1>
+      <p class="meta">生效日期：2026 年 9 月 11 日 · 適用版本：1.0.0</p>
+      <nav aria-label="語言"><a href="#en" lang="en">Read in English</a></nav>
+      <div class="summary"><p>選取文字，在你的裝置上看見色彩。<br>擴充功能不會將選取內容傳送給開發者或第三方。</p></div>
+      <h2>本政策的範圍</h2>
+      <p>本政策說明 Color Picker Chrome 擴充功能及其內建色彩練習場如何處理資料。功能是辨識使用者選取的 CSS 顏色代碼、顯示色票，並在使用者點擊時複製色碼。不需建立帳號。</p>
+      <h2>讀取與使用的資料</h2>
+      <ul>
+        <li><strong>選取的文字與色碼：</strong>啟用時，擴充功能會在使用者選取文字後，讀取網頁或支援輸入欄位中的選取內容。為了判斷色碼邊界，也會讀取選取範圍前後各一個字元。這些內容在裝置上解析，用來顯示色票，不會建立選取紀錄或儲存至擴充功能儲存空間。</li>
+        <li><strong>文字位置：</strong>讀取選取範圍、相關文字節點及畫面座標，讓色票和標記出現在正確位置。擴充功能會在目前頁面加入色彩預覽介面。</li>
+        <li><strong>偏好設定：</strong>使用 <code>chrome.storage.local</code> 儲存是否啟用、是否顯示行內色塊，以及是否辨識不含 # 的 HEX。設定儲存在目前瀏覽器設定檔，不使用 Chrome 同步儲存。</li>
+        <li><strong>剪貼簿：</strong>使用者點擊色票或色塊時，擴充功能才會嘗試把該色碼寫入剪貼簿。擴充功能不讀取剪貼簿內容；作業系統的剪貼簿歷程或同步功能由使用者的系統設定控制。</li>
+      </ul>
+      <p>選取內容可能包含使用者原本在網頁或表單中看到的其他文字；擴充功能只為辨識色碼而在本機處理該次內容。密碼輸入欄位不會被解析。擴充功能不記錄瀏覽歷史、完整網址、點擊歷程或鍵盤輸入紀錄。</p>
+      <h2>網站存取與權限</h2>
+      <p>HTTP、HTTPS 網頁與其中的 iframe 需要內容指令碼，才能在使用者反白文字後自動預覽色彩。若使用者自行開啟 Chrome 的「允許存取檔案網址」，同樣功能也可用於本機 HTML。<code>storage</code> 權限僅用於上述偏好設定。使用者可從 Chrome 擴充功能設定管理網站存取權。</p>
+      <h2>分享、追蹤與有限用途</h2>
+      <p>本版本沒有分析、廣告、追蹤器或遠端程式碼，也不將選取文字、色碼或偏好設定傳送給開發者或第三方。資料不販售、不用於廣告、信用評估或與色彩預覽功能無關的用途。開發者不會接收或人工閱讀選取內容。Color Picker 對使用者資料的使用遵守 Chrome Web Store 使用者資料政策，包括 Limited Use（有限用途）要求。</p>
+      <h2>保留時間與使用者控制</h2>
+      <p>當次解析結果只用於目前頁面的預覽，不建立持久紀錄；關閉或重新載入頁面會釋放該頁面的暫存狀態。按 Esc 可關閉預覽，從工具列可暫停解析或修改偏好。偏好設定保留至使用者變更設定、清除擴充功能儲存資料或移除擴充功能。已複製的色碼可能繼續留在系統剪貼簿，需由使用者自行覆寫或清除。</p>
+      <h2>聯絡與政策更新</h2>
+      <p>若對本政策或資料處理有疑問，請聯繫 <a href="mailto:kevinyaungputra@gmail.com">kevinyaungputra@gmail.com</a>。若你主動提供問題說明或截圖，開發者會使用該次提供的資訊處理詢問；請避免附上不必要的個人或機密資料。</p>
+      <p>功能或資料處理方式變更時，本政策會同步更新並修改生效日期。Chrome 商店、瀏覽器、作業系統及公開政策頁的網站託管服務各自依其政策處理服務運作所需資料；本擴充功能不會把選取內容傳送給這些服務。</p>
+    </article>
+    <article id="en" lang="en">
+      <h1>Privacy policy</h1>
+      <p class="meta">Effective September 11, 2026 · Applies to version 1.0.0</p>
+      <nav aria-label="Language"><a href="#zh" lang="zh-Hant">閱讀繁體中文版</a></nav>
+      <div class="summary"><p>Selected text is processed on your device.<br>The extension does not send selected content to the developer or third parties.</p></div>
+      <h2>Scope</h2>
+      <p>This policy covers the Color Picker Chrome extension and its bundled color playground. The extension identifies selected CSS color codes, displays swatches, and copies a color code when you click a swatch. No account is required.</p>
+      <h2>Data access and use</h2>
+      <ul>
+        <li><strong>Selected text and color codes:</strong> while enabled, the extension reads text you select on a web page or in a supported input field. It also reads one character immediately before and after the selection to check color-code boundaries. This content is parsed on your device to display swatches. It is not added to a selection history or saved in extension storage.</li>
+        <li><strong>Text positions:</strong> selection ranges, relevant text nodes, and screen coordinates position the swatches and markers. The extension adds a color-preview interface to the current page.</li>
+        <li><strong>Preferences:</strong> <code>chrome.storage.local</code> saves whether the extension is enabled, whether inline swatches appear, and whether HEX codes without # are recognized. Preferences remain in your browser profile; Chrome sync storage is not used.</li>
+        <li><strong>Clipboard:</strong> the extension attempts to write a color code only when you click its swatch or marker. It does not read your clipboard. Operating-system clipboard history or synchronization is controlled by your system settings.</li>
+      </ul>
+      <p>A selection may include other text from the page or form. That selection is processed locally only to identify color codes. Password input fields are excluded. The extension does not record browsing history, full URLs, click histories, or keystroke logs.</p>
+      <h2>Website access and permissions</h2>
+      <p>Content scripts run on HTTP and HTTPS pages and their frames to show previews after text selection. Local HTML files are supported only when you enable Chrome's file-URL access setting. The <code>storage</code> permission is used only for the preferences described above. You can manage website access in Chrome's extension settings.</p>
+      <h2>Sharing, tracking, and limited use</h2>
+      <p>This version contains no analytics, advertising, trackers, or remote code. It does not transmit selected text, color codes, or preferences to the developer or third parties. Data is not sold or used for advertising, creditworthiness, or purposes unrelated to color previews. The developer does not receive or manually read selected content. Color Picker's use of user data complies with the Chrome Web Store User Data Policy, including its Limited Use requirements.</p>
+      <h2>Retention and control</h2>
+      <p>Parsing results are used for the current page's preview without a persistent history. Closing or reloading the page releases its temporary state. Press Esc to close a preview; use the toolbar popup to pause parsing or change preferences. Preferences remain until changed, extension storage is cleared, or the extension is uninstalled. Copied color codes may remain in the system clipboard until you overwrite or clear them.</p>
+      <h2>Contact and updates</h2>
+      <p>For questions about this policy or data handling, contact <a href="mailto:kevinyaungputra@gmail.com">kevinyaungputra@gmail.com</a>. If you voluntarily send a support message or screenshot, the developer uses that information to respond to your inquiry. Avoid including unnecessary personal or confidential information.</p>
+      <p>When functionality or data handling changes, this policy and its effective date will be updated. The Chrome Web Store, browser, operating system, and hosting service for the public policy page operate under their respective policies. The extension does not send selected content to those services.</p>
+    </article>
+    <footer>Color Picker · 選取，即見色彩。</footer>
+  </main>
+</body>
+</html>

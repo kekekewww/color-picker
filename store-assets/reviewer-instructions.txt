@@ -1,0 +1,21 @@
+Test instructions for Color Picker 1.0.0
+
+No account, payment, credentials, backend service, or special test data is required. The extension interface is in Traditional Chinese.
+
+1. Open the Color Picker toolbar popup. If necessary, use Chrome's Extensions menu to find it.
+2. Click 打開色彩練習場 (Open color playground). This opens the bundled demo.html extension page and does not require an external website.
+3. Drag to select the first HEX sample: #365DCC, #F2C94C, #FF8496, #395F53.
+   Expected: a Color Picker panel displays four swatches and the original codes. Inline color markers appear near the selected codes.
+4. Click the first swatch. Expected on a page where clipboard writes are allowed: the panel reports 已複製 #365DCC (Copied #365DCC). Press Esc to close the preview.
+5. Select the adjacent HEX example and the RGB / HSL / HWB example. Expected: each recognized code has a swatch. Transparent colors appear against a checkerboard.
+6. In the toolbar popup, turn off 啟用色彩預覽 (Enable color previews). Select another sample; no preview should appear. Turn it on again to restore previews.
+7. Turn off 在文字旁顯示色塊 (Show inline color markers). The swatch list should still appear, but inline markers should disappear.
+8. Enable 辨識不含 # 的 HEX (Recognize HEX without #). In the playground textarea enter FF0099, 365DCC, then select both codes. Expected: two colors. This setting is off by default because ordinary words can resemble short HEX codes.
+9. Reload the popup and confirm the changed preferences persisted. Restore defaults: previews on, inline markers on, bare HEX off.
+10. To verify website injection, open an ordinary HTTPS page containing a supported CSS color code, reload the page after installing the extension, and select that code. A preview appears if site access is granted.
+
+Optional local file test: enable Allow access to file URLs in Chrome's extension details and open a local HTML file containing #365DCC. Select the text to preview. Local file access is not required for the bundled playground or HTTP/HTTPS pages.
+
+Limits: Chrome settings pages, the Chrome Web Store, and the built-in PDF viewer restrict content scripts. Password fields are excluded. Images/canvas pixels and named colors such as red are not supported. Clipboard writes may be blocked on insecure pages or in restricted frames; the extension displays a message asking the user to copy the original text instead.
+
+Privacy: selected text and adjacent boundary characters are parsed on the device. Only preferences use chrome.storage.local. The extension contains no remote code or network-based analytics and does not transmit selected text. The privacy policy is linked from the popup and playground and included in the package as privacy.html.

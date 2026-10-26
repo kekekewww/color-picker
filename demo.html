@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>色彩練習場 · Color Picker</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body class="playground">
+  <div class="page-shell">
+    <header class="page-header"><div class="brand"><img src="icons/icon48.png" width="38" height="38" alt=""><span>color picker<span class="brand-note">讓色碼，有畫面。</span></span></div><span class="local-label">色彩練習場</span></header>
+    <main>
+      <section class="hero">
+        <div><h1>從一串代碼，<br>認識一個顏色。</h1><p>用滑鼠反白下方的色碼，看看它們的真實模樣。<br>也試試一次選取一整行，讓配色一起浮現。</p></div>
+        <div class="hero-art" aria-label="藍色、黃色與粉紅色色票"><div class="paint-card" style="--paint:#365dcc"><i></i><code>#365DCC</code></div><div class="paint-card" style="--paint:#f2c94c"><i></i><code>#F2C94C</code></div><div class="paint-card" style="--paint:#ff8496"><i></i><code>#FF8496</code></div></div>
+      </section>
+      <section class="workspace" aria-labelledby="practice-title">
+        <div class="workspace-heading"><div><h2 id="practice-title">反白一段，試試看</h2><p>色票會出現在選取文字旁；點一下即可複製代碼。</p></div><span class="hint-key">Esc 關閉預覽</span></div>
+        <div class="sample"><div><h3>從 HEX 開始</h3><small>最常見的網頁色碼</small></div><code id="hex-sample">#365DCC, #F2C94C, #FF8496, #395F53</code></div>
+        <div class="sample"><div><h3>連在一起也可以</h3><small>不需要空格或逗號</small></div><code id="adjacent-sample">#365DCC#F2C94C#FF8496</code></div>
+        <div class="sample"><div><h3>短碼與透明度</h3><small>棋盤格代表透明背景</small></div><code id="alpha-sample">#F85 / #38B8 / #365DCC80 / rgba(255, 132, 150, 0.5)</code></div>
+        <div class="sample"><div><h3>不同語言，同樣色彩</h3><small>混合格式自動辨識</small></div><code id="mixed-sample">rgb(54, 93, 204)，hsl(46 86% 62%)；hwb(351 52% 0%)</code></div>
+        <div class="sample"><div><h3>探索更多色彩空間</h3><small>現代 CSS 色彩格式</small></div><code id="modern-sample">oklch(65% 0.2 260), lab(70% 35 20), lch(75% 55 145), oklab(0.7 0.1 -0.1), color(display-p3 1 0.4 0.5)</code></div>
+        <div class="sample"><div><h3>跨文字樣式</h3><small>代碼被粗體分開也能辨識</small></div><code id="split-sample">#36<b>5D</b>CC 與 rgb(<b>255</b>, 132, 150)</code></div>
+        <div class="editor-section"><label for="custom-colors">換成你的配色</label><textarea class="editor" id="custom-colors" spellcheck="false">#8B5CF6, rgb(34 197 94), hsl(25 95% 60%)</textarea><p class="editor-note">貼上或輸入色碼，再反白文字。輸入欄位會在旁邊顯示色票清單。<br>不含 # 的 HEX 預設關閉，可從擴充功能設定開啟。</p></div>
+      </section>
+    </main>
+    <footer class="page-footer"><span>選取文字僅在本機解析，色票顯示於網頁上，不上傳內容。 <a href="privacy.html" target="_blank">隱私權政策</a></span><span>支援格式依瀏覽器而定。</span></footer>
+  </div>
+  <script src="src/parser.js"></script>
+  <script src="src/content.js"></script>
+</body>
+</html>

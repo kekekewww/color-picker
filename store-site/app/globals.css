@@ -1,0 +1,28 @@
+:root { color-scheme: light; font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif; color: #1e3151; background: #f5f8fd; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: #294daf; text-underline-offset: 4px; }
+a:focus-visible { outline: 3px solid #365dcc; outline-offset: 4px; }
+.policy { max-width: 820px; margin: 0 auto; padding: 44px 28px 64px; }
+.policy-brand { display: flex; align-items: center; gap: 12px; font-size: 21px; font-weight: 650; }
+.policy-brand img { width: 38px; height: 38px; }
+.policy-colors { display: flex; height: 8px; margin: 28px 0 40px; border-radius: 4px; overflow: hidden; }
+.policy-colors span { flex: 1; background: #365dcc; }
+.policy-colors span:nth-child(2) { background: #a9b8ef; }
+.policy-colors span:nth-child(3) { background: #f2c94c; }
+.policy-colors span:nth-child(4) { background: #ff8496; }
+.policy-colors span:nth-child(5) { background: #395f53; }
+.policy h1 { font-size: clamp(30px, 6vw, 42px); line-height: 1.25; letter-spacing: -1px; margin: 0 0 14px; }
+.policy h2 { font-size: 21px; line-height: 1.45; margin: 32px 0 10px; }
+.policy p, .policy li { font-size: 15px; line-height: 1.9; }
+.policy p { margin: 10px 0; }
+.policy ul { padding-left: 22px; }
+.policy li + li { margin-top: 8px; }
+.policy .meta { color: #586980; font-size: 13px; }
+.policy .summary { background: #fff; border-left: 4px solid #365dcc; padding: 18px 22px; margin: 28px 0; }
+.policy .summary p { margin: 0; font-size: 17px; font-weight: 600; }
+.policy nav { margin: 18px 0; font-size: 14px; }
+.policy article + article { margin-top: 52px; padding-top: 38px; border-top: 1px solid #ccd7e7; }
+.policy code { font-family: Consolas, monospace; overflow-wrap: anywhere; }
+.policy footer { margin-top: 40px; font-size: 13px; color: #586980; }
+@media (max-width: 480px) { .policy { padding: 28px 20px 40px; } .policy .summary { padding: 14px 17px; } }

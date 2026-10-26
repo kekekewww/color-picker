@@ -1,0 +1,16 @@
+Name
+Color Picker
+
+Short description
+Select CSS color codes to preview swatches instantly. Supports HEX, RGB, HSL and modern CSS color formats.
+
+Detailed description
+Color Picker helps you understand colors written in web pages and design documents.
+
+Select a supported CSS color code on an ordinary web page to display a nearby swatch. Select several codes to compare a palette, click a preview to copy its value, or press Esc to dismiss it.
+
+After installation, reload any pages that were already open and select text such as #365DCC to try it. The toolbar popup includes a practice page with examples and settings to pause previews or hide inline markers. The interface is in Traditional Chinese.
+
+Selected text, adjacent boundary characters, and positioning information are processed on your device. They are not sent to the developer or third parties, and no selection history is saved. Only preferences are stored locally. The extension writes to the clipboard when you click a swatch and does not read clipboard contents.
+
+Requires Chrome 111 or later. This tool previews codes in text; it does not sample image pixels. Protected pages such as Chrome settings, the Chrome Web Store, and the built-in PDF viewer are not supported. Password fields are excluded. Local HTML support requires file-URL access to be enabled. If browser security blocks copying, copy the original text instead.

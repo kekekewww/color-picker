@@ -1,0 +1,13 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const root = path.resolve(__dirname, '..');
+const site = path.join(root, 'store-site');
+const html = fs.readFileSync(path.join(root, 'privacy.html'), 'utf8');
+const body = html.match(/<body>([\s\S]*?)<\/body>/)?.[1];
+if (!body) throw new Error('Privacy document has no body');
+fs.mkdirSync(path.join(site, 'public', 'icons'), { recursive: true });
+fs.writeFileSync(path.join(site, 'app', 'policy-content.json'), JSON.stringify(body, null, 2) + '\n');
+fs.copyFileSync(path.join(root, 'privacy.css'), path.join(site, 'app', 'globals.css'));
+for (const file of ['privacy.html', 'privacy.css']) fs.copyFileSync(path.join(root, file), path.join(site, 'public', file));
+fs.copyFileSync(path.join(root, 'icons', 'icon48.png'), path.join(site, 'public', 'icons', 'icon48.png'));
+console.log('Synced bundled and website privacy policy from the same source.');

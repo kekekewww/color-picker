@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Color Picker",
+  "version": "1.0.0",
+  "description": "選取顏色代碼，立即看見色彩。支援 HEX、RGB、HSL 與現代 CSS 色彩格式。",
+  "minimum_chrome_version": "111",
+  "permissions": ["storage"],
+  "icons": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "action": {
+    "default_title": "Color Picker · 選取，即見色彩",
+    "default_popup": "popup.html",
+    "default_icon": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" }
+  },
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*", "file:///*"],
+    "js": ["src/parser.js", "src/content.js"],
+    "run_at": "document_idle",
+    "all_frames": true,
+    "match_about_blank": true
+  }]
+}
